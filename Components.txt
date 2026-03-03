@@ -1,34 +1,54 @@
 
-1. Software Defined Networking
-https://account.meraki.com/login/
 
-Control Plane - how data should be managed, routed, or processed
+## SDN (Software Defined Networking)
+*https://account.meraki.com/login/*
+
+__Control Plane__ - The part of the device that makes routing and network decisions.
 ~~~
 !@Cisco
+show processes cpu sorted
 show ip route
-show ip nat translations
 show ip ospf database
-show ip eigrp topology
 show ip bgp
-show spanning-tree vlan 1
+show ip eigrp topology
+show spanning-tree
+show policy-map control-plane
 ~~~
 
+<br>
 
-Data Plane - Movement of data. Forwarding
-
-Wireshark
+__Data Plane__ - The part that forwards packets according to rules calculated by the control plane.
 ~~~
 !@Cisco
-ping 8.8.8.8
-traceroute 8.8.8.8
-copy run ftp:
+show ip nat translations
+show interfaces counters protocol status 
+show access-lists
+show policy-map interface
+ping / traceroute
 ~~~
 
+<br>
 
-Management Plane - the instance where the user interacts with the device.
-User Interface
-  CLI
-  GUI
+__Management Plane__ - the instance where the user interacts with the device.
+- SSH/Telnet Access
+- SNMP
+- Syslog, NetFlow
+- NTP, Logging
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ~~~
 !@Cisco
